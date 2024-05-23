@@ -1,0 +1,17 @@
+/* Add your custom styles here */
+body{
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: none;
+}

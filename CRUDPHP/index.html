@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Records CRUD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Student Records</h2>
+      <button onclick="openForm()">Add Student</button>
+      <div class="form-popup" id="myForm">
+        <form action="create.php" method="post" class="form-container">
+          <h3>Add Student</h3>
+          <label for="prn"><b>PRN</b></label>
+          <input type="text" placeholder="Enter PRN" name="prn" required />
+
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name" required />
+
+          <label for="division"><b>Division</b></label>
+          <select name="division" required>
+            <option value="CS-A">CS-A</option>
+            <option value="CS-B">CS-B</option>
+            <option value="CS-C">CS-C</option>
+            <option value="CS-D">CS-D</option>
+          </select>
+
+          <label for="phone"><b>Phone</b></label>
+          <input type="text" placeholder="Enter Phone" name="phone" required />
+
+          <button type="submit" class="btn">Add</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </form>
+      </div>
+
+      <div id="studentTable"></div>
+      <div id="updateContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

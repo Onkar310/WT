@@ -1,0 +1,63 @@
+/* Add your custom styles here */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Keep the video behind the content */
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#content {
+    padding: 50px 0;
+    margin-top: 100vh;
+    /* Make sure content starts below the video */
+}
+
+.container {
+    background-color: #100e12;
+    /* Choose your desired background color */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+
+.cont {
+    border-style: groove; border: 20px; border-color: white;
+}
+
+.InnerContainer {
+    margin: 15px;
+}
+
+.logo {
+    margin: 8px;
+    height: 45px;
+    width: 45px;
+}
+
+table tr td {
+    padding: 5px;
+
+}

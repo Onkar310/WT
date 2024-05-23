@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Electricity Bill Calculator</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Electricity Bill Calculator</h2>
+        <form id="billForm">
+            <div class="form-group">
+                <label for="units">Enter Units Consumed:</label>
+                <input type="number" class="form-control" id="units" name="units" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateBill()">Calculate Bill</button>
+        </form>
+        
+        <div id="result" class="mt-3"></div>
+    </div>
+
+    <script>
+        function calculateBill() {
+            var units = parseFloat($('#units').val());
+            var rate = 0;
+
+            if (units <= 50) {
+                rate = 3.50;
+            } else if (units <= 150) {
+                rate = 4.00;
+            } else if (units <= 250) {
+                rate = 5.20;
+            } else {
+                rate = 6.50;
+            }
+
+            var bill = units * rate;
+            $('#result').html('<p class="alert alert-success">Your Bill: Rs. ' + bill.toFixed(2) + '</p>');
+        }
+    </script>
+</body>
+</html>

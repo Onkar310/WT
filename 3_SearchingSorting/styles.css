@@ -1,0 +1,30 @@
+body {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+#elementsSection,
+#integersSection {
+    margin-top: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: center;
+}

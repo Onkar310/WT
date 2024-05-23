@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Elements and Integers</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Your custom JavaScript file -->
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h2>Manage Elements</h2>
+
+    <button class="btn btn-primary" onclick="showElementsSection()">
+      Elements
+    </button>
+    <button class="btn btn-primary" onclick="showIntegersSection()">
+      Integers
+    </button>
+
+    <div id="elementsSection" style="display: none">
+      <label for="searchInput">Search:</label>
+      <input
+        type="text"
+        id="searchInput"
+        class="form-control"
+        placeholder="Enter keyword"
+      />
+
+      <button class="btn btn-primary" onclick="performSearch()">Search</button>
+      <button class="btn btn-primary" onclick="performSort()">Sort</button>
+      <button class="btn btn-secondary" onclick="clearResults()">Clear</button>
+
+      <form id="addElementForm">
+        <div class="form-group">
+          <label for="nameInput">Name:</label>
+          <input
+            type="text"
+            id="nameInput"
+            class="form-control"
+            placeholder="Enter name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="categoryInput">Category:</label>
+          <input
+            type="text"
+            id="categoryInput"
+            class="form-control"
+            placeholder="Enter category"
+            required
+          />
+        </div>
+
+        <button type="button" class="btn btn-success" onclick="addElement()">
+          Add
+        </button>
+      </form>
+
+      <table id="elementTable" class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="elementBody"></tbody>
+      </table>
+    </div>
+
+    <div id="integersSection" style="display: none">
+      <label for="integerSearchInput">Search Integer:</label>
+      <input
+        type="number"
+        id="integerSearchInput"
+        class="form-control"
+        placeholder="Enter integer"
+      />
+
+      <button class="btn btn-primary" onclick="searchInteger()">Search</button>
+      <button class="btn btn-primary" onclick="sortIntegers()">Sort</button>
+      <button class="btn btn-secondary" onclick="clearIntegers()">Clear</button>
+
+      <form id="addIntegerForm">
+        <div class="form-group">
+          <label for="integerInput">Add Integer:</label>
+          <input
+            type="number"
+            id="integerInput"
+            class="form-control"
+            placeholder="Enter integer"
+            required
+          />
+        </div>
+
+        <button type="button" class="btn btn-success" onclick="addInteger()">
+          Add
+        </button>
+      </form>
+
+      <table id="integerTable" class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>Integer</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="integerBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="data.js"></script>
+  </body>
+</html>
